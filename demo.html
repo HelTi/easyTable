@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.3/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="easyTable.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 tcon">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var data = [
+        { 'a': '小明', 'b': '100' },
+        { 'a': '小明', 'b': '250' },
+        { 'a': '小明', 'b': '260' },
+        { 'a': '小明', 'b': '270' },
+        { 'a': '小花', 'b': '90' },
+        { 'a': '小花', 'b': '190' }
+    ]
+    var c = new mtable({
+        tableid: 'm',
+        adddom: ".add",
+        tableclass: 'table table-bordered',
+        tableparent: '.tcon',
+        theade: '<td>姓名</td><td>价格</td>',
+        mergeCells: true
+    }, data)
+
+</script>
+
+</html>
