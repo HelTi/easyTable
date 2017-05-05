@@ -29,7 +29,7 @@ new mtable({
         tableclass: 'table table-bordered',
         tableparent: '.tcon',
         theade: '<td>姓名</td><td>价格</td>',
-        mergeCells: true
+        mergeCells: true //是否自动合并单元格，默认不合并
     }, data)
 
     //node
