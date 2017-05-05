@@ -1,4 +1,4 @@
->基於jquery的自動生成表格的插件，可以合并單元格
+>基於jquery的自動生成表格的插件，可以合并單元格，兼容commonjs，amd,cmd规范，可以在node环境中使用
 
 #### 配置參數
 ```javascript
@@ -31,4 +31,10 @@ new mtable({
         theade: '<td>姓名</td><td>价格</td>',
         mergeCells: true
     }, data)
+
+    //node
+    var mtable=require('mtable.js')
+    var m=new mtable({
+
+    },data)
 ```
