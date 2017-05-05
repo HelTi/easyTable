@@ -1,4 +1,12 @@
-(function (window, $) {
+
+
+if(typeof module !=='undefined' && typeof exports ==='object'){
+    var $=require('jquery');
+}else{
+    var $=window.$
+}
+(function(){
+
     var mtable = function (opt, data) {
         this.tableId = opt.tableid;
         this.tableClass = opt.tableclass;
@@ -135,6 +143,17 @@
         }
 
     }
+    //兼容模块
+    if(typeof module !=='undefined' && typeof exports ==='object'){
+        module.exports=mtable;
+    }else if(typeof define ==='function' && (define.amd || define.cmd)){
+        define(function(){
+            return mtable;
+        })
+    }else{
+        window.mtable=mtable;
+    }
+}).call(function(){
+   return (typeof window !=='undefined' ? window : global )
+},$)
 
-    window.mtable = mtable;
-})(window, $);
