@@ -32,8 +32,8 @@ new mtable({
         mergeCells: true //是否自动合并单元格，默认不合并
     }, data)
 
-    //node
-    var mtable=require('mtable.js')
+    //使用es6
+    import mtable from 'easyTable'
     var m=new mtable({
 
     },data)
