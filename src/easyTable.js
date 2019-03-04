@@ -1,6 +1,8 @@
+import { version } from '../package.json';
 import $ from 'jquery'
 
 var mtable = function (opt, data) {
+    this.version = version;
     this.tableId = opt.tableid;
     this.tableClass = opt.tableclass;
     this.tableParent = opt.tableparent;
